@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest 
     strategy:
       matrix:
-        node_version: ['18.x']
+        node_version: ['18.x'] # nuxt3 use node 18
         
     steps:
       - uses: actions/checkout@v4 
@@ -30,7 +30,7 @@ jobs:
           username: ${{secrets.REMOTE_USERNAME}}   # 指定登录用户
           password: ${{secrets.REMOTE_PASSWORD}}  # 指定登录密码
           port: 22  # ssh 端口
-          source: "dist/"  # 复制文件内容 即要传什么过去？
+          source: "dist/nuxt-blog/"  # 复制文件内容 即要传什么过去？
           target: ${{secrets.REMOTE_TARGET}} # 上传路径 即上传到服务器的那个路径下
 
         
