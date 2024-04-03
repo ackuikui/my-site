@@ -30,8 +30,8 @@ jobs:
           username: ${{secrets.REMOTE_USERNAME}}
           password: ${{secrets.REMOTE_PASSWORD}}
           port: 22
-          source: "dist/nuxt-blog"
-          target: ${{secrets.REMOTE_TARGET}}
+          source: "dist/nuxt-blog/*"
+          target: "/usr/share/nginx/html/nuxt-blog/"
 
         
           
