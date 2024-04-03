@@ -26,12 +26,12 @@ jobs:
       - name: SCP Files
         uses: appleboy/scp-action@v0.0.1
         with:
-          host: ${{secrets.REMOTE_HOST}}  # 指定服务器ip
-          username: ${{secrets.REMOTE_USERNAME}}   # 指定登录用户
-          password: ${{secrets.REMOTE_PASSWORD}}  # 指定登录密码
-          port: 22  # ssh 端口
-          source: "dist/nuxt-blog/"  # 复制文件内容 即要传什么过去？
-          target: ${{secrets.REMOTE_TARGET}} # 上传路径 即上传到服务器的那个路径下
+          host: ${{secrets.REMOTE_HOST}}
+          username: ${{secrets.REMOTE_USERNAME}}
+          password: ${{secrets.REMOTE_PASSWORD}}
+          port: 22
+          source: "dist/nuxt-blog/"
+          target: ${{secrets.REMOTE_TARGET}}
 
         
           
