@@ -3,37 +3,37 @@ const demos = [
   {
     title: "im-web",
     desc: "websocket在线聊天, 后端(ws + node)",
-    to: "https://ackuikui.com:4433/im-web",
+    to: "https://demos.ackuikui.com/im-web/",
     img: "im-web.png",
   },
   {
     title: "react-web",
     desc: "react项目(react, react-redux, react-router-dom, ant-design)",
-    to: "https://ackuikui.com:4433/react-project",
+    to: "https://demos.ackuikui.com/react-project/",
     img: "react-project.png",
   },
   {
     title: "vue2-project",
     desc: "vue2项目(vue-router、 axios、 element-ui、 echarts), 后端(express、mysql)",
-    to: "https://ackuikui.com:4433/vue2-project",
+    to: "https://demos.ackuikui.com/vue2-project/",
     img: "/vue2-project.png",
   },
   {
     title: "text-ai-web",
     desc: "文字生成图片",
-    to: "https://ackuikui.com:4433/text-ai-web",
+    to: "https://demos.ackuikui.com/text-ai-web/",
     img: "text-ai-web.png",
   },
   {
     title: "my-site",
-    desc: "即当前本站，使用 nuxt + nuxt/content + tailwindcss, 学习 Nuxt UI Pro 组件设计, 服务器资源有限-使用 nuxt generate 生成静态站点",
+    desc: "即当前本站，使用 vue3 + nuxt3 + nuxt/content + tailwindcss, 学习 Nuxt UI Pro 组件设计, 服务器资源有限-使用 nuxt generate 生成静态站点",
     to: "/",
     img: "",
   },
   {
     title: "vuepress-site",
     desc: "vue静态博客，使用 vuepress",
-    to: "https://ackuikui.com:4433/vuepress-site/",
+    to: "https://demos.ackuikui.com/vuepress-site/",
     img: "vuepress-site.png",
   },
 ];
@@ -42,6 +42,10 @@ function open(to) {
   // navigateTo(to);
   window.open(to, "kuikui_tab");
 }
+
+onMounted(() => {
+  document.title =  '首页'
+})
 </script>
 
 <template>
@@ -74,6 +78,8 @@ function open(to) {
       </div>
     </div>
   </KkContainer>
+  
+  <KkFooter></KkFooter>
 </template>
 
 <style>

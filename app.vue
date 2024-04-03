@@ -1,7 +1,7 @@
 <template>
   <KkHeader></KkHeader>
-  <NuxtPage style="min-height: 100vh;"/>
-  <KkFooter></KkFooter>
+  <NuxtPage />
+
 </template>
 
 <script>
@@ -9,4 +9,10 @@
 
 <style>
 @import "./plugins/tailwindcss.css";
+
+body{
+  --header-height: 6rem;
+  --scroll-mt: 80px;
+}
+
 </style>
