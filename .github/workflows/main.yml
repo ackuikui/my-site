@@ -1,0 +1,37 @@
+name: deploy_my_site
+on:
+  push:
+    branches: [main]
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest 
+    strategy:
+      matrix:
+        node_version: ['18.x']
+        
+    steps:
+      - uses: actions/checkout@v4 
+      
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node_version }}
+          
+      - name: npm install, build
+        run: |
+          npm install
+          npm run generate
+          
+      - name: SCP Files
+        uses: appleboy/scp-action@v0.0.1
+        with:
+          host: ${{secrets.REMOTE_HOST}}  # 指定服务器ip
+          username: ${{secrets.REMOTE_USERNAME}}   # 指定登录用户
+          password: ${{secrets.REMOTE_PASSWORD}}  # 指定登录密码
+          port: 22  # ssh 端口
+          source: "dist/"  # 复制文件内容 即要传什么过去？
+          target: ${{secrets.REMOTE_TARGET}} # 上传路径 即上传到服务器的那个路径下
+
+        
+          
