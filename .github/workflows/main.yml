@@ -24,7 +24,7 @@ jobs:
           npm run generate
           
       - name: SCP Files
-        uses: appleboy/scp-action@v0.0.1
+        uses: appleboy/scp-action@v0.1.7 # not v0.0.1
         with:
           host: ${{secrets.REMOTE_HOST}}
           username: ${{secrets.REMOTE_USERNAME}}
