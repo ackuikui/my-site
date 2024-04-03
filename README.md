@@ -9,22 +9,24 @@ modify host while download ui template failed
 
 `npx nuxi init my-site` 不使用模板，ui模板，ui-pro
 
-npm run generate 打包部署
 
-nuxt
-@nuxt/content
-tailwindcss
+## generate
+`npm run generate` 打包静态部署
 
-"@nuxt/content": "^2.12.1",
 
-window powershell上报错
-+ set PORT=3111 && node .output/server/index.mjs
+
+## build
+`npm run build`
+> 问题 window powershell上报错
++ set PORT=3111 && node ./dist/server/index.mjs
 +               ~~
 标记“&&”不是此版本中的有效语句分隔符。
 换用cmd执行
-PORT=800 node .output/server/index.mjs
 
-nuxt-site.sh文件，服务器部署 build ssr版
+> 服务器部署 build ssr版
+PORT=800 node ./dist/server/index.mjs
+nuxt-site.sh文件，
+
 
 
 
