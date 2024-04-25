@@ -1,5 +1,6 @@
 
 # vite
+同webapck对比使用
 
 ## 创建项目
 `npm create vite@latest`
