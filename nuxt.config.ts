@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  experimental:{
-    payloadExtraction: false,
-  },
+  // nginx开启gzip,可预加载
+  // experimental:{
+  //   payloadExtraction: false,
+  // },
 
   devtools: { enabled: true },
   
